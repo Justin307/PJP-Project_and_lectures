@@ -1,0 +1,15 @@
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\bin\Debug\net6.0\G1.TXT
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\bin\Debug\net6.0\Grammar.exe
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\bin\Debug\net6.0\Grammar.deps.json
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\bin\Debug\net6.0\Grammar.runtimeconfig.json
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\bin\Debug\net6.0\Grammar.dll
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\bin\Debug\net6.0\Grammar.pdb
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\Grammar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\Grammar.AssemblyInfoInputs.cache
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\Grammar.AssemblyInfo.cs
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\Grammar.csproj.CoreCompileInputs.cache
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\Grammar.dll
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\refint\Grammar.dll
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\Grammar.pdb
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\Grammar.genruntimeconfig.cache
+C:\Users\ondra\OneDrive\Dokumenty\PJP\Lab03\obj\Debug\net6.0\ref\Grammar.dll

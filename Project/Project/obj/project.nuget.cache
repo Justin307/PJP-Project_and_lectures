@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4++WyJl8b4uLsrmh2W1FDz/keMrOO7zYpxCuyNV9VrjAmGPf4aFTB8ieFkj5b+ihRCKYhnNnL6TqYdM6lW0xdw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ondra\\OneDrive\\Dokumenty\\PJP\\Project\\Project\\Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ondra\\.nuget\\packages\\antlr4.runtime.standard\\4.13.1\\antlr4.runtime.standard.4.13.1.nupkg.sha512"
+  ],
+  "logs": []
+}

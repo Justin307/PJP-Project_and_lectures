@@ -107,18 +107,6 @@ public partial class GrammarBaseListener : IGrammarListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitPrimitiveType([NotNull] GrammarParser.PrimitiveTypeContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="GrammarParser.typeCast"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterTypeCast([NotNull] GrammarParser.TypeCastContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="GrammarParser.typeCast"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitTypeCast([NotNull] GrammarParser.TypeCastContext context) { }
 
 	/// <inheritdoc/>
 	/// <remarks>The default implementation does nothing.</remarks>

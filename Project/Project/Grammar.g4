@@ -10,6 +10,7 @@ WRITE: 'write';
 IF: 'if';
 ELSE: 'else';
 WHILE: 'while';
+DO: 'do';
 SEMI: ';';
 COMMA: ',';
 DOT: '.';
@@ -28,11 +29,11 @@ AND: '&&';
 OR: '||';
 
 // Tokens
-IDENTIFIER: [a-zA-Z] [a-zA-Z0-9_]*;
 INT: [0-9]+;
 FLOAT: [0-9]+'.'[0-9]+;
 BOOL: 'true' | 'false';
 STRING_LITERAL: '"' .*? '"';
+IDENTIFIER: [a-zA-Z] [a-zA-Z0-9_]*;
 WS: [ \t\r\n]+ -> skip;
 COMMENT: '/*' .*? '*/' -> skip;
 LINE_COMMENT: '//' ~[\r\n]* -> skip;
@@ -49,6 +50,7 @@ statement:
     | block
     | IF '(' expression ')' statement (ELSE statement)?
     | WHILE '(' expression ')' statement
+    | DO statement WHILE '(' expression ')' SEMI
     ;
 
 declaration:
@@ -67,9 +69,14 @@ expression:
     | STRING_LITERAL
     | '(' expression ')'
     | MINUS expression
-    | expression (PLUS | MINUS | DIV | MULT | MOD | AND | OR | LESS | GREATER | EQ | NEQ | ASSIGN | DOT) expression
     | NEG expression
-    | typeCast
+    | expression (MULT | DIV | MOD) expression
+    | expression (PLUS | MINUS | DOT) expression
+    | expression (LESS | GREATER) expression
+    | expression (EQ | NEQ) expression
+    | expression AND expression
+    | expression OR expression
+    | expression ASSIGN expression
     ;
 
 primitiveType:
@@ -77,8 +84,4 @@ primitiveType:
     | FLOAT_KEYWORD
     | STRING_KEYWORD
     | BOOL_KEYWORD
-    ;
-
-typeCast:
-    '(' primitiveType ')' expression
     ;

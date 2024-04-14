@@ -67,10 +67,4 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitPrimitiveType([NotNull] GrammarParser.PrimitiveTypeContext context);
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="GrammarParser.typeCast"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitTypeCast([NotNull] GrammarParser.TypeCastContext context);
 }

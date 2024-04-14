@@ -10,7 +10,7 @@ namespace Project
         static void Main(string[] args)
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-            string input = "write 10;";
+            var input = new StreamReader("../../../input.txt");
             AntlrInputStream inputStream = new AntlrInputStream(input);
             GrammarLexer lexer = new GrammarLexer(inputStream);
             CommonTokenStream commonTokenStream = new CommonTokenStream(lexer);
@@ -22,8 +22,18 @@ namespace Project
 
             if (parser.NumberOfSyntaxErrors == 0)
             {
-                /*ParseTreeWalker walker = new ParseTreeWalker();
-                walker.Walk(new EvalListener(), tree);*/
+                TypeCheckingVisitor visitor = new TypeCheckingVisitor();
+                visitor.Visit(tree);
+                if(visitor.errors.Count > 0)
+                    foreach (var error in visitor.errors)
+                    {
+                        Console.Error.WriteLine(error);
+                    }
+                else
+                {
+                    InstructionGeneratorVisitor generator = new InstructionGeneratorVisitor();
+                    generator.Visit(tree);
+                }
             }
         }
     }

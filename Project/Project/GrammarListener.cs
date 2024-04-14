@@ -90,14 +90,4 @@ public interface IGrammarListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitPrimitiveType([NotNull] GrammarParser.PrimitiveTypeContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="GrammarParser.typeCast"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterTypeCast([NotNull] GrammarParser.TypeCastContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="GrammarParser.typeCast"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitTypeCast([NotNull] GrammarParser.TypeCastContext context);
 }

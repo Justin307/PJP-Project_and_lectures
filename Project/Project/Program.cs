@@ -33,6 +33,8 @@ namespace Project
                 {
                     InstructionGeneratorVisitor generator = new InstructionGeneratorVisitor();
                     generator.Visit(tree);
+                    Interpreter interpreter = new Interpreter();
+                    interpreter.Interpret("ins.txt");
                 }
             }
         }

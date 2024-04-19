@@ -195,15 +195,20 @@ public class InstructionGeneratorVisitor : GrammarBaseVisitor<string>
         {
             string res1 = this.VisitExpression(context.expression()[0]);
             string res2Type = this.CheckOutExpressionType(context.expression()[1]);
-            if(res1 == "I" && res2Type == "F")
+            if (res1 == "I" && res2Type == "F")
+            {
                 sw.WriteLine("itof");
+                res1 = "F";
+            }
             string res2 = this.VisitExpression(context.expression()[1]);
             if (res1 == "F" && res2 == "I")
+            {
                 sw.WriteLine("itof");
+            }
             if(context.PLUS() != null)
-                sw.WriteLine("add");
+                sw.WriteLine("add " + res1);
             if(context.MINUS() != null)
-                sw.WriteLine("sub");
+                sw.WriteLine("sub " + res1);
             return res1;
         }
         
@@ -211,15 +216,20 @@ public class InstructionGeneratorVisitor : GrammarBaseVisitor<string>
         {
             string res1 = this.VisitExpression(context.expression()[0]);
             string res2Type = this.CheckOutExpressionType(context.expression()[1]);
-            if(res1 == "I" && res2Type == "F")
+            if (res1 == "I" && res2Type == "F")
+            {
                 sw.WriteLine("itof");
+                res1 = "F";
+            }
             string res2 = this.VisitExpression(context.expression()[1]);
             if (res1 == "F" && res2 == "I")
+            {
                 sw.WriteLine("itof");
+            }
             if(context.DIV() != null)
-                sw.WriteLine("div");
+                sw.WriteLine("div " + res1);
             if(context.MULT() != null)
-                sw.WriteLine("mul");
+                sw.WriteLine("mul " + res1);
             return res1;
         }
 
@@ -309,8 +319,7 @@ public class InstructionGeneratorVisitor : GrammarBaseVisitor<string>
         /* Done */
         if (context.ChildCount == 3 && context.expression().Length == 1)
         {
-            VisitExpression(context.expression(0));
-            return null;
+            return VisitExpression(context.expression(0));
         }
         
         return null;
